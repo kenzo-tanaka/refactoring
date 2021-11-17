@@ -12,9 +12,9 @@ const station = {
 
 // TODO:context
 test('全て範囲外で空の配列を返す', () => {
-  expect(readingOutsideRange(station, 46, 59)).toEqual([]);
+  expect(readingOutsideRange(station, 46, 59, null)).toEqual([]);
 })
 
 test('範囲内のものを返す', () => {
-  expect(readingOutsideRange(station, 48, 59)).toEqual([{ temp: 47, time: '2021/11/10' }]);
+  expect(readingOutsideRange(station, 48, 59, null)).toEqual([{ temp: 47, time: '2021/11/10' }]);
 })
