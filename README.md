@@ -9,6 +9,8 @@
 > 名前を改善していくための良い方法は、関数の目的をコメントとして書くことです。そのコメントを名前に変えます。  
 > P.131
 
-参考:
+[リファクタリング(第2版): 既存のコードを安全に改善する (OBJECT TECHNOLOGY SERIES)](https://amzn.to/3oCk2lx)
+
+# JSの参考
 
 https://maku77.github.io/nodejs/module/create-module.html
