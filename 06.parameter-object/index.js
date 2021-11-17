@@ -1,4 +1,4 @@
-exports.readingOutsideRange = function readingOutsideRange(station, min, max, range) {
+exports.readingOutsideRange = function readingOutsideRange(station, range) {
   return station.readings
-    .filter(r => r.temp < min || r.temp > max);
+    .filter(r => r.temp < range.min || r.temp > range.max);
 }

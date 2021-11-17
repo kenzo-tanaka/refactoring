@@ -1,3 +1,4 @@
+const NumberRange = require('./numberRange');
 const { readingOutsideRange } = require('./index');
 
 const station = {
@@ -12,9 +13,11 @@ const station = {
 
 // TODO:context
 test('全て範囲外で空の配列を返す', () => {
-  expect(readingOutsideRange(station, 46, 59, null)).toEqual([]);
+  const range = new NumberRange(46, 59);
+  expect(readingOutsideRange(station, range)).toEqual([]);
 })
 
 test('範囲内のものを返す', () => {
-  expect(readingOutsideRange(station, 48, 59, null)).toEqual([{ temp: 47, time: '2021/11/10' }]);
+  const range = new NumberRange(48, 59);
+  expect(readingOutsideRange(station, range)).toEqual([{ temp: 47, time: '2021/11/10' }]);
 })
