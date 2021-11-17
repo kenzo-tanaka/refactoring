@@ -11,13 +11,21 @@ const station = {
   ]
 };
 
-// TODO:context
-test('全て範囲外で空の配列を返す', () => {
-  const range = new NumberRange(46, 59);
-  expect(readingOutsideRange(station, range)).toEqual([]);
+describe('readingOutsideRange', () => {
+
+  describe('全て範囲外', () => {
+    test('空の配列を返す', () => {
+      const range = new NumberRange(46, 59);
+      expect(readingOutsideRange(station, range)).toEqual([]);
+    })
+  })
+
+  describe('一部範囲外', () => {
+    test('範囲内のオブジェクトを返す', () => {
+      const range = new NumberRange(48, 59);
+      expect(readingOutsideRange(station, range)).toEqual([{ temp: 47, time: '2021/11/10' }]);
+    })
+  })
+
 })
 
-test('範囲内のものを返す', () => {
-  const range = new NumberRange(48, 59);
-  expect(readingOutsideRange(station, range)).toEqual([{ temp: 47, time: '2021/11/10' }]);
-})
