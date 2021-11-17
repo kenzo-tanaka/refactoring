@@ -1,20 +1,4 @@
-const Bird = require('./bird');
-
-function plumages(birds) {
-  return new Map(birds.map(b => [b.name, plumage(b)]));
-}
-
-function speeds(birds) {
-  return new Map(birds.map(b => [b.name, airSpeedVelocity(b)]));
-}
-
-function plumage(bird) {
-  return new Bird(bird).plumage;
-}
-
-function airSpeedVelocity(bird) {
-  return new Bird(bird).airSpeedVelocity;
-}
+const { plumages, speeds } = require('./index')
 
 // test
 const birds = [
