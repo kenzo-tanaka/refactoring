@@ -1,6 +1,4 @@
 const Booking = require('./booking');
-const PremiumBookingDelegate = require('./premiumBookingDelegate');
-
 // client
 function createBooking(show, date) {
   return new Booking(show, date);
