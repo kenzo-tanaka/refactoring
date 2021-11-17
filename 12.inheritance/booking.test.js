@@ -42,7 +42,7 @@ describe('Booking#hasTalkback', () => {
   })
 })
 
-describe('PremiumBooking#hasTalkback(true)', () => {
+describe('PremiumBooking#hasTalkback', () => {
   test('ピークであってもtrueを返す', () => {
     const show = {
       price: 1000,
