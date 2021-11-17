@@ -4,24 +4,10 @@ module.exports = class Bird {
   }
 
   get plumage() {
-    switch (this.type) {
-      case 'EuropeanSwallow':
-        return 'average';
-      case 'AfricanSwallow':
-        return 'high';
-      default:
-        return null;
-    }
+    return 'unknown';
   }
 
   get airSpeedVelocity() {
-    switch (this.type) {
-      case 'EuropeanSwallow':
-        return 35;
-      case 'AfricanSwallow':
-        return 40;
-      default:
-        return null;
-    }
+    return null;
   }
 }
