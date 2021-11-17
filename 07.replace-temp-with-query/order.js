@@ -5,9 +5,16 @@ module.exports = class Order {
   }
 
   get price() {
-    var basePrice = this._quantity * this._item.price;
-    var discountFactor = 0.98;
-    if (basePrice > 1000) discountFactor -= 0.03;
-    return basePrice * discountFactor;
+    return this.basePrice * this.discountFactor;
+  }
+
+  get basePrice() {
+    return this._quantity * this._item.price;
+  }
+
+  get discountFactor() {
+    let discountFactor = 0.98;
+    if (this.basePrice > 1000) discountFactor -= 0.03;
+    return discountFactor;
   }
 }
